@@ -1,0 +1,61 @@
+.wrapper {
+    border-top: solid 1px #f0f0f1;
+    padding: 16px 0 8px;
+}
+.title {
+    margin-bottom: 8px;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    color: rgba(22, 24, 35, 0.75);
+    font-weight: 600;
+    padding: 0 8px;
+}
+.container {
+    padding-left: 8px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.btn-htag {
+    min-width: 96px;
+    height: 24px;
+    margin: 0px 6px 12px 0px;
+    margin-left: 0px;
+    box-shadow: none;
+    &:hover {
+        background-color: rgba(22, 24, 35, 0.03);
+    }
+}
+.btn-htag + .btn-htag {
+    margin-left: 0px;
+}
+.wrapper-content {
+    color: #d0d1d3;
+    display: flex;
+    align-items: center;
+    text-align: left;
+
+    box-sizing: border-box;
+    width: fit-content;
+    max-width: 100%;
+    svg {
+        flex-shrink: 0;
+    }
+}
+.htag {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-left: 6px;
+    font-weight: 400;
+    font-weight: 1.4rem;
+    color: #9a9ba0;
+}
+// responsive when offsetWith of window small than 1070px
+@media screen and (max-width: 1070px) {
+    .wrapper {
+        display: none;
+    }
+}

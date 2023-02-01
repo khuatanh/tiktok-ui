@@ -1,0 +1,64 @@
+.wrapper-preview {
+    width: 320px;
+    padding: 20px;
+    background: rgb(255, 255, 255);
+    box-shadow: rgb(0 0 0 / 12%) 0px 2px 12px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    overflow: hidden auto;
+
+    z-index: 9999;
+}
+
+.head-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.btn-follow {
+    height: 32px;
+}
+
+.body-info {
+    margin-bottom: 12px;
+}
+
+.Nick-name {
+    font-size: 1.8rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+.tick {
+    width: 14px;
+    height: 14px;
+    color: #20d5ec;
+    margin-left: 2px;
+}
+
+.name {
+    font-size: 1.4rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.footer-info {
+    font-size: 1.7rem;
+}
+
+.number-follow,
+.number-like {
+    font-weight: 700;
+    margin-right: 6px;
+}
+
+.follower {
+    margin-right: 12px;
+}

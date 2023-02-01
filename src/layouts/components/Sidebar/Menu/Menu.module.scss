@@ -1,0 +1,40 @@
+.menu-item {
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    padding: 8px;
+    transition: background-color ease-in-out 200ms;
+
+    &:hover {
+        background-color: rgba(22, 24, 35, 0.03);
+        border-radius: 4px;
+    }
+
+    .menu-active-icon {
+        display: none;
+    }
+    &.active {
+        color: var(--primary);
+        .menu-icon {
+            display: none;
+        }
+        .menu-active-icon {
+            display: flex;
+        }
+    }
+}
+.menu-active-icon,
+.menu-icon {
+    display: flex;
+}
+.title {
+    margin-left: 8px;
+}
+
+// responsive
+@media screen and (max-width: 1070px) {
+    .title {
+        display: none;
+    }
+}

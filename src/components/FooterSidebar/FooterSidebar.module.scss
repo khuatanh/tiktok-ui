@@ -1,0 +1,28 @@
+.wrapper {
+    border-top: solid 1px #f0f0f1;
+    padding: 16px 0px 0px 8px;
+}
+.container {
+    display: block;
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+.link-footer {
+    margin: 5px 6px 0px 0px;
+    color: #ababb0 !important;
+}
+
+.copyright {
+    color: #ababb0 !important;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+// responsive when offsetWidth of browser small than 1070px
+@media screen and (max-width: 1070px) {
+    .wrapper {
+        display: none;
+    }
+}

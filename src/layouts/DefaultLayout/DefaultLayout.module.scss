@@ -1,0 +1,31 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container {
+    // display: flex;
+    justify-content: space-between;
+    width: var(--default-layout-width);
+    max-width: 100%;
+    min-height: 1100px;
+    margin-top: var(--default-layout-hight);
+}
+
+.content {
+    flex: 1;
+    margin-left: 390px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+// responsive
+
+@media screen and (max-width: 1070px) {
+    .wrapper {
+        display: flex;
+        .content {
+            margin-left: 120px;
+        }
+    }
+}

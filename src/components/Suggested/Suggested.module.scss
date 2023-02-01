@@ -1,0 +1,76 @@
+.title {
+    margin-bottom: 8px;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    color: rgba(22, 24, 35, 0.75);
+    font-weight: 600;
+    padding: 0 8px;
+}
+.wrapper {
+    border-top: solid 1px #f0f0f1;
+    padding: 16px 0px;
+}
+.AccountItem-wrapper {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    padding: 8px;
+    cursor: pointer;
+    &:hover {
+        background: rgba(22, 24, 35, 0.03);
+        border-radius: 4px;
+    }
+}
+.avatar {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    .name {
+        font-size: 1.2rem;
+        color: rgba(22, 24, 35, 0.75);
+        font-weight: 400;
+        overflow: hidden;
+        flex: 1;
+    }
+}
+.tick {
+    margin-left: 2px;
+    color: #20d5ec;
+    width: 14px;
+    height: 14px;
+}
+.more-btn {
+    color: rgb(254, 44, 85);
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 20px;
+    cursor: pointer;
+}
+// responsive for offsetWidth of window small than 1070px
+
+@media screen and (max-width: 1070px) {
+    .title,
+    .info,
+    .more-btn {
+        display: none;
+    }
+
+    .wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .avatar {
+        margin-right: 0;
+    }
+}
