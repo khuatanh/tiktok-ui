@@ -1,11 +1,11 @@
 import { Fragment } from 'react';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import { publicRoute } from '~/routes';
 import DefaultLayout from '~/layouts';
 
 function App() {
     return (
-        <Router>
+        <HashRouter>
             <div className="App">
                 <Routes>
                     {publicRoute.map((route, index) => {
@@ -21,7 +21,7 @@ function App() {
                     })}
                 </Routes>
             </div>
-        </Router>
+        </HashRouter>
     );
 }
 
