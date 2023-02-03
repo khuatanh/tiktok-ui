@@ -1,11 +1,11 @@
 import { Fragment } from 'react';
-import { HashRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { publicRoute } from '~/routes';
 import DefaultLayout from '~/layouts';
 
 function App() {
     return (
-        <HashRouter>
+        <Router basename="tiktok-ui">
             <div className="App">
                 <Routes>
                     {publicRoute.map((route, index) => {
@@ -17,11 +17,11 @@ function App() {
                         } else if (route.layout === null) {
                             Layout = Fragment;
                         }
-                        return <Route key={index} path={route.path} element={<Layout>{<Page />}</Layout>} />;
+                        return <Route exact key={index} path={route.path} element={<Layout>{<Page />}</Layout>} />;
                     })}
                 </Routes>
             </div>
-        </HashRouter>
+        </Router>
     );
 }
 
