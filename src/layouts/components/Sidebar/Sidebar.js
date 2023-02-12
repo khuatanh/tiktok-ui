@@ -5,9 +5,10 @@ import Menu, { MenuItem } from './Menu';
 import Styles from './Sidebar.module.scss';
 import { HomeIcon, HomeActiveIcon, UserGroup, UserActiveGroup, LiveIcon, LiveActiveIcon } from '~/icons/Icon';
 import Suggested from '~/components/Suggested';
-import * as SuggestedService from '~/Services/SuggestedAPI';
+
 import Discover from '~/components/Discover/Discover';
 import FooterSidebar from '~/components/FooterSidebar';
+import NotifyLogin from '~/components/NotifyLogin';
 
 const cx = classNames.bind(Styles);
 
@@ -25,6 +26,7 @@ function Sidebar() {
                 <MenuItem title="LIVE" to={config.routes.live} icon={<LiveIcon />} activeIcon={<LiveActiveIcon />} />
             </Menu>
 
+            <NotifyLogin title="Log in to follow creators, like videos, and view comments." />
             <Suggested title="Suggested accounts" />
 
             <Discover title="Discover" />

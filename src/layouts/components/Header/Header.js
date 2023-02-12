@@ -20,7 +20,7 @@ import config from '~/configs';
 import Button from '~/components/Button/Button';
 import Menu from '~/layouts/components/Propper/Menu';
 import { faUser } from '@fortawesome/free-regular-svg-icons';
-import { InboxIcon, MessageIcon, UploadIcon } from '~/icons/Icon';
+import { InboxIcon, MessageIcon, UploadIcon, UploadIcon2 } from '~/icons/Icon';
 import Image from '~/components/Image/Image';
 import Search from '../Search/Search';
 
@@ -58,7 +58,7 @@ const menuItem = [
 ];
 
 function Header() {
-    const currentUser = true;
+    const currentUser = false;
 
     const handleOnchange = (menuItem) => {
         console.log(menuItem);
@@ -118,7 +118,13 @@ function Header() {
                         </div>
                     ) : (
                         <>
-                            <Button text>Upadate</Button>
+                            <Button className={cx('btn-update')} outline>
+                                <div className={cx('btn-wrapper')}>
+                                    <UploadIcon2 />
+
+                                    <span> Upload</span>
+                                </div>
+                            </Button>
                             <Button primary>Login</Button>
                         </>
                     )}

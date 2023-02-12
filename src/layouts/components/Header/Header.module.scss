@@ -74,4 +74,29 @@
     cursor: pointer;
 }
 
-// custom tippy
+// btn when is customer
+.btn-update {
+    border: 1px solid rgba(22, 24, 35, 0.12) !important;
+    border-radius: 2px !important;
+    height: 36px;
+    min-width: 110px;
+    background: rgba(255, 255, 255, 1);
+    color: rgba(22, 24, 35, 1) !important;
+    font-weight: 600;
+    font-size: 1.4rem;
+    &:hover {
+        background-color: rgba(22, 24, 35, 0.03) !important;
+        border-color: rgba(22, 24, 35, 0.12) !important;
+    }
+    span {
+        margin-left: 4px;
+        font-size: 1.6rem;
+    }
+}
+.btn-wrapper {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    // padding: 0 16px;
+    box-sizing: border-box;
+}
