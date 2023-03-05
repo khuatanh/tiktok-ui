@@ -1,5 +1,5 @@
 // layout
-import { HeaderOnly } from '~/layouts';
+import { HeaderOnly, StretchLayout } from '~/layouts';
 
 import configs from '~/configs';
 import Home from '~/page/Home';
@@ -12,7 +12,7 @@ import Live from '~/page/Live';
 const publicRoute = [
     { path: configs.routes.home, component: Home },
     { path: configs.routes.following, component: Following },
-    { path: configs.routes.profile, component: Profile },
+    { path: configs.routes.profile, component: Profile, layout: StretchLayout },
     { path: configs.routes.live, component: Live },
     { path: configs.routes.search, component: Search, layout: null },
     { path: configs.routes.upload, component: Upload, layout: HeaderOnly },

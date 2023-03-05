@@ -12,6 +12,7 @@
     border-radius: 92px;
     border: solid 1.5px transparent;
     input {
+        z-index: 1000;
         flex: 1;
         height: 100%;
         font-family: var(--font-family);

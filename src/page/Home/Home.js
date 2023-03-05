@@ -27,6 +27,7 @@ function Home() {
         const VideosCallApi = async () => {
             setLoading(true);
             const result = await VideosService.CallVideosAPI(page, 'for-you');
+            result.sort(() => Math.random() - 0.5);
             setDataVideos((prev) => [...prev, ...result]);
             setLoading(false);
         };

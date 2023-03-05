@@ -1,0 +1,234 @@
+.wrapper {
+    padding: 32px 24px;
+}
+
+.profile-basic {
+    width: 532px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile-basic-wrap {
+    display: flex;
+}
+
+.avatar-user {
+    border-radius: 50%;
+    width: 116px;
+    height: 116px;
+    margin-right: 20px;
+}
+
+.name {
+    font-family: var(--font-ibm);
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    margin-bottom: 4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+}
+
+.nick-name {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    text-overflow: ellipsis;
+    height: 25px;
+    overflow: hidden;
+    max-width: 450px;
+    white-space: nowrap;
+    display: flex;
+    align-items: flex-end;
+}
+
+.btn-follow {
+    margin-top: 16px;
+    min-width: 208px;
+    min-height: 36px;
+    font-size: 1.8rem;
+    font-weight: 600;
+    padding: 6px 8px;
+    user-select: none;
+    font-family: var(--font-ibm);
+}
+
+.share-info {
+    width: 65px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile-interact {
+    margin-top: 22px;
+    font-family: var(--font-ibm);
+
+    .number-of-follow,
+    .number-of-follower,
+    .number-of-like {
+        font-size: 1.8rem;
+        font-weight: bolder;
+        font-family: var(--font-ibm);
+    }
+
+    .follow-now-text,
+    .follower-text,
+    .like-text {
+        font-size: 1.6rem;
+        font-family: var(--font-ibm);
+        margin: 0 20px 0 6px;
+        color: #161823bf;
+    }
+}
+
+.profile-description {
+    width: 532px;
+    margin: 10px 0 5px;
+}
+
+.wrapper-bio-link {
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+
+    .link-bio {
+        font-size: 1.6rem;
+        font-family: var(--font-ibm);
+        color: #161823;
+        font-weight: 600;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+// profile-body
+
+.profile-user-body {
+    margin-top: 20px;
+    width: 800px;
+}
+
+.body-header {
+    position: relative;
+    display: flex;
+    width: 460px;
+}
+
+// .video-btn {
+//     position: relative;
+// }
+
+.video-btn,
+.video-liked-btn {
+    position: relative;
+    min-width: 230px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.video-liked-btn:nth-child(2) {
+    position: relative;
+    &:hover {
+        ~ .tab-line {
+            transform: translateX(100%) !important;
+        }
+    }
+    &.active {
+        ~ .tab-line {
+            transform: translateX(100%);
+        }
+    }
+}
+
+.video-btn:nth-child(1) {
+    &:hover {
+        ~ .tab-line {
+            transform: translateX(0) !important;
+        }
+    }
+    &.active {
+        ~ .tab-line {
+            transform: translateX(0);
+        }
+    }
+}
+
+.like-text {
+    margin-left: 6px;
+}
+
+.tab-line {
+    background-color: currentColor;
+    bottom: 0;
+    height: 2px;
+    left: 0;
+    position: absolute;
+    transition: transform 0.3s ease 0s;
+    width: 50%;
+}
+
+.video-content-wrapper {
+    display: grid;
+    gap: 24px 16px;
+    grid-template-columns: repeat(auto-fill, minmax(184px, 1fr));
+    width: 100%;
+}
+
+.video-content-wrapper > .no-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 444px;
+    width: 100%;
+    margin-left: 300px;
+
+    .title {
+        margin-top: 24px;
+        .heading {
+            font-size: 2.5rem;
+            font-weight: 800;
+        }
+        p {
+            min-width: 400px;
+        }
+    }
+}
+
+.video-private {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 444px;
+    width: 100%;
+    margin-left: 300px;
+
+    p {
+        min-width: 400px;
+    }
+    .heading {
+        font-size: 2.5rem;
+        font-weight: bold;
+    }
+}
+// reponsive
+
+@media (max-width: 1070px) {
+    .video-content-wrapper > .no-content {
+        margin-left: 150px;
+    }
+    .video-private {
+        margin-left: 150px;
+    }
+}

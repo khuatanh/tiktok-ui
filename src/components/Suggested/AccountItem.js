@@ -10,6 +10,7 @@ import Button from '~/components/Button';
 import Styles1 from './PreviewInfo/PreviewInfo.module.scss';
 import Image from '~/components/Image';
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const cx = classNames.bind(Styles);
 const cx1 = classNames.bind(Styles1);
@@ -43,22 +44,26 @@ function AccountItem({ data }) {
                     <div className={cx1('wrapper-preview')}>
                         <div className={cx1('head-info')}>
                             {/* <img src={data.avatar} alt="" className={cx1('avatar')} /> */}
-                            <Image src={data.avatar} alt="" className={cx1('avatar')} />
+                            <Link to={`/@${data.nickname}`}>
+                                <Image src={data.avatar} alt="" className={cx1('avatar')} />
+                            </Link>
 
                             <Button className={cx1('btn-follow')} primary>
                                 Follow
                             </Button>
                         </div>
-                        <div className={cx1('body-info')}>
-                            <h4 className={cx1('Nick-name')}>
-                                {data.nickname}
-                                <span className={cx1('tick')}>
-                                    {data.tick && <FontAwesomeIcon icon={faCheckCircle} className={cx1('tick')} />}
-                                </span>
-                            </h4>
+                        <Link to={`/@${data.nickname}`}>
+                            <div className={cx1('body-info')}>
+                                <h4 className={cx1('Nick-name')}>
+                                    {data.nickname}
+                                    <span className={cx1('tick')}>
+                                        {data.tick && <FontAwesomeIcon icon={faCheckCircle} className={cx1('tick')} />}
+                                    </span>
+                                </h4>
 
-                            <p className={cx1('name')}>{data.first_name + ' ' + data.last_name}</p>
-                        </div>
+                                <p className={cx1('name')}>{data.first_name + ' ' + data.last_name}</p>
+                            </div>
+                        </Link>
                         <div className={cx1('footer-info')}>
                             <span className={cx1('number-follow')}>{data.followers_count}</span>
                             <span className={cx1('follower')}>Follower</span>
@@ -69,19 +74,20 @@ function AccountItem({ data }) {
                 );
             }}
         >
-            <div className={cx('AccountItem-wrapper')}>
-                <Image src={data.avatar} alt="" className={cx('avatar')} />
-                {/* <img className={cx('avatar')} src={data.avatar} alt="" /> */}
-                <div className={cx('info')}>
-                    <h4 className={cx('nick-name')}>
-                        {data.nickname}
-                        <span className={cx('tick')}>
-                            {data.tick && <FontAwesomeIcon icon={faCheckCircle} className={cx('tick')} />}
-                        </span>
-                    </h4>
-                    <h5 className={cx('name')}>{data.first_name + ' ' + data.last_name}</h5>
+            <Link to={`/@${data.nickname}`}>
+                <div className={cx('AccountItem-wrapper')}>
+                    <Image src={data.avatar} alt="" className={cx('avatar')} />
+                    <div className={cx('info')}>
+                        <h4 className={cx('nick-name')}>
+                            {data.nickname}
+                            <span className={cx('tick')}>
+                                {data.tick && <FontAwesomeIcon icon={faCheckCircle} className={cx('tick')} />}
+                            </span>
+                        </h4>
+                        <h5 className={cx('name')}>{data.first_name + ' ' + data.last_name}</h5>
+                    </div>
                 </div>
-            </div>
+            </Link>
         </Tippy>
     );
 }

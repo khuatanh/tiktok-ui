@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import images from '~/assets/images';
 import styles from './styles.module.scss';
 
-const Image = forwardRef(({ src, className, ...props }, ref) => {
+const Image = forwardRef(({ src, className, alt, ...props }, ref) => {
     const [fallback, setfallback] = useState('');
 
     const handleOnError = () => {
@@ -18,7 +18,7 @@ const Image = forwardRef(({ src, className, ...props }, ref) => {
             ref={ref}
             {...props}
             onError={handleOnError}
-            alt=""
+            alt={'' || alt}
         />
     );
 });

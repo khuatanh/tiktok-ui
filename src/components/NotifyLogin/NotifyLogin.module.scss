@@ -16,3 +16,8 @@
     font-weight: 700;
     font-size: 1.8rem;
 }
+@media screen and (max-width: 1070px) {
+    .wrapper {
+        display: none;
+    }
+}

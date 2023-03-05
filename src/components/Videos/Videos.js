@@ -1,6 +1,7 @@
 import classNames from 'classnames/bind';
 import PropTypes from 'prop-types';
 import { useRef, useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 import Styles from './Videos.module.scss';
 import Image from '~/components/Image';
@@ -75,13 +76,17 @@ function Videos({ data, mute, toggleMute, adjustVolume, volume }) {
 
     return (
         <div className={cx('wrapper')}>
-            <Image src={data.user.avatar} className={cx('avatar')} />
+            <Link to={`/@${data.user.nickname}`}>
+                <Image src={data.user.avatar} className={cx('avatar')} />
+            </Link>
             <div className={cx('contain')}>
-                <div className={cx('info')}>
-                    <span className={cx('nick-name')}>{data.user.nickname}</span>
-                    {data.user.tick && <FontAwesomeIcon icon={faCheckCircle} />}
-                    <span className={cx('name')}>{data.user.first_name + ' ' + data.user.last_name}</span>
-                </div>
+                <Link to={`/@${data.user.nickname}`}>
+                    <div className={cx('info')}>
+                        <span className={cx('nick-name')}>{data.user.nickname}</span>
+                        {data.user.tick && <FontAwesomeIcon icon={faCheckCircle} />}
+                        <span className={cx('name')}>{data.user.first_name + ' ' + data.user.last_name}</span>
+                    </div>
+                </Link>
                 <div className={cx('caption')}>
                     <p className={cx('description')}>{data.description}</p>
                 </div>

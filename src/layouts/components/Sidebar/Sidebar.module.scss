@@ -1,5 +1,5 @@
 .wrapper {
-    z-index: 100;
+    // z-index: 10;
     width: 356px;
     position: fixed;
     top: 0;
@@ -8,6 +8,10 @@
     min-height: 100%;
     padding: 20px 0 80px 0;
     overflow-y: scroll;
+
+    &.shrink {
+        width: 240px;
+    }
     &:hover {
         transition: opacity 2s ease;
     }
@@ -39,5 +43,8 @@
         left: 0;
         top: 0;
         border-right: 1px solid rgba(22, 24, 35, 0.12);
+    }
+    .shrink {
+        width: 72px !important;
     }
 }

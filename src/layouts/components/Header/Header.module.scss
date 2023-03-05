@@ -20,6 +20,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    &.stretch {
+        width: 100%;
+    }
 }
 .logo-link {
     display: flex;

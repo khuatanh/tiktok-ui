@@ -57,7 +57,7 @@ const menuItem = [
     },
 ];
 
-function Header() {
+function Header({ stretch }) {
     const currentUser = false;
 
     const handleOnchange = (menuItem) => {
@@ -90,7 +90,7 @@ function Header() {
     ];
     return (
         <header className={cx('wrapper')}>
-            <div className={cx('contain')}>
+            <div className={cx('contain', { stretch: stretch })}>
                 <Link to={config.routes.home} className={cx('logo-link')}>
                     <img src={images.logo} alt="TikTok"></img>
                 </Link>

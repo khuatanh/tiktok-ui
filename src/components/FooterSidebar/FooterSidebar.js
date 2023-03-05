@@ -83,7 +83,7 @@ function FooterSidebar() {
                 </a>
             </div>
             <span className={cx('copyright')} data-e2e="copyright">
-                ©2022 TikTok
+                ©2022 TikTok- clone by Khuất Anhh
             </span>
         </div>
     );

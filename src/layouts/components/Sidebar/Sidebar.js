@@ -12,9 +12,9 @@ import NotifyLogin from '~/components/NotifyLogin';
 
 const cx = classNames.bind(Styles);
 
-function Sidebar() {
+function Sidebar({ shrink }) {
     return (
-        <aside className={cx('wrapper')}>
+        <aside className={cx('wrapper', { shrink: shrink })}>
             <Menu>
                 <MenuItem title="For You" to={config.routes.home} icon={<HomeIcon />} activeIcon={<HomeActiveIcon />} />
                 <MenuItem
